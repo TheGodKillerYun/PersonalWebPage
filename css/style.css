@@ -1,0 +1,67 @@
+body{
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+/* 1. Centrar el BLOQUE de la lista en la página */
+.lista-centrada {
+    /* Define un ancho máximo para que el bloque de la lista no se extienda al 100% */
+    max-width: 600px; 
+    /* Margen automático a izquierda y derecha centra el bloque en la página */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Eliminar el margen por defecto para un espaciado más limpio */
+    padding: 0; 
+}
+
+/* 2. Centrar visualmente el CONTENIDO dentro de cada ítem de la lista */
+.lista-centrada li {
+    /* Centra el texto dentro del espacio asignado al ítem */
+    text-align: center; 
+    /* Opcional: Ajusta el espaciado entre los ítems */
+    padding: 5px 0; 
+}
+
+/* Estilo para la clase 'volver' del enlace */
+.volver {
+    /* * Por defecto, los enlaces (<a>) son elementos 'inline' y 
+     * no responden bien a los márgenes automáticos o a ciertas 
+     * propiedades de posicionamiento. 
+     * Es mejor tratarlos como bloques o inline-bloques si necesitas moverlos. 
+     */
+    display: block; 
+    
+    /* * Esto asegura que el enlace se alinee al borde izquierdo 
+     * del contenedor padre (por defecto, ya lo está, pero lo 
+     * aseguramos si el contenedor tiene text-align: center).
+     */
+    text-align: left; 
+    
+    /* Opcional: Para darle un poco de espacio desde el borde */
+    margin-left: 10px; 
+    padding: 5px; 
+    
+    /* Opcional: Estilos visuales */
+    text-decoration: none; /* Quita el subrayado */
+    color: #007bff; /* Color azul estándar para links */
+}
+
+/* Opcional: Centrar el título y el enlace también */
+h1, a {
+    text-align: center;
+    display: block; /* Necesario para que el margin auto o text-align funcione en el enlace */
+}
+
+footer {
+    position: fixed; /* Lo saca del flujo normal y lo fija a la ventana */
+    bottom: 0;       /* Lo pega al borde inferior */
+    left: 0;         /* Lo pega al borde izquierdo */
+    width: 100%;     /* Asegura que ocupe todo el ancho */
+    height: 60px;
+    /* Estilos de apariencia */
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
